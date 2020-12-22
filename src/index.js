@@ -31,7 +31,7 @@ app.get("/api/posts", (req, res) => {
     const topMax = posts.filter((value, idx) => idx < max);
     res.send(topMax);
 
-    if (initialMax === null) {
+    if (initialMax == null) {
         initialMax = max;
         numOfApiCalls++;
         setTimeout(() => {
