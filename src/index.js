@@ -28,7 +28,7 @@ app.get("/api/posts", (req, res) => {
         finalMax = Math.min(finalMax, initialMax);
 
     }
-    const topMax = posts.filter((value, idx) => idx < max);
+    const topMax = posts.filter((value, idx) => idx < finalMax);
     res.send(topMax);
 
     if (initialMax == null) {
